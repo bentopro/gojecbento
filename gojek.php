@@ -7,26 +7,26 @@ if (!file_exists('token')) {
 
 include ("curl.php");
 echo "\n";
-echo "\e[94m            NAMAKU BENTO               \n";
+echo "\e[94m            ##NAMAKU BENTO##               \n";
 echo "\e[91m FORMAT NOMOR HP : INDONESIA '62***' , US='1***'\n";
 echo "\e[93m SCRIPT GOJEK AUTO REGISTER + AUTO CLAIM VOUCHER\n";
 echo "\n";
-echo "\e[96m[?] Nomere danjingna nyak (62/1) : ";
+echo "\e[96m[?] Nomere danjingna wa (62/1) : ";
 $nope = trim(fgets(STDIN));
 $register = register($nope);
 if ($register == false)
     {
-    echo "\e[91m[x] Nomere wis daftar bol\n";
+    echo "\e[91m[x] Nomere wis ndaftar wa\n";
     }
   else
     {
     otp:
-    echo "\e[96m[!] Kode verifikasine danjinga (OTP) : ";
+    echo "\e[96m[!] Kode verifikasine danjingna wa (OTP) : ";
     $otp = trim(fgets(STDIN));
     $verif = verif($otp, $register);
     if ($verif == false)
         {
-        echo "\e[91m[x] Kodene salah wa\n";
+        echo "\e[91m[x] Kode Verifikasi Salah nyuk!!!\n";
         goto otp;
         }
       else
